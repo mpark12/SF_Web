@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd" >
+       
+		
+	<context:component-scan base-package="main">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+	</context:component-scan>
+	
+	<context:component-scan base-package="chart">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
+	</context:component-scan>
+	
+	
+	<!-- DB연결 lib 추가 후-->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+	destroy-method="close">
+	<!-- driver, connection(url, port, sid, id, pass) -->
+	<!-- driver : jdbc -->
+	<!-- 
+	<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" /> -->
+	<property name="driverClassName" value="net.sf.log4jdbc.DriverSpy" />	
+	
+	<!-- 접속 DB 서버 정보 -->
+	<property name="url" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:xe" />
+	<!-- 계정 정보 -->
+	<property name="username" value="scott" />
+	<property name="password" value="tiger" />
+	</bean>
+	
+	<!-- Mybatis연결 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" /> <!-- ref는 연결정보이다 !! -->
+		<!-- mybatis 설정 xml -->
+		<property name="configLocation" value="classpath:resource/mybatis.Spring.xml" />
+	</bean>
+	
+	<!-- Repository interface 패키지 연결 
+		default mybatis 연결 dao 인터페이스 패키지 위치 지정
+		다수의 패키지를 등록할 때에는 ,를 통해 등록한다.
+	-->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="repository" />	
+	</bean>
+</beans>

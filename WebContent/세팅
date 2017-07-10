@@ -1,0 +1,64 @@
+SF_Prj 설계
+
+
+1. 폴더구조
+
+가. 라이브러리
+
+	WebContent -> WEB-INF -> lib  (스프링 프레임워크와 JDBC 등의 클래스 적재)
+
+
+나. 뷰단
+	main		-> 메인 페이지 적재
+	basketball	-> 농구화 페이지 적재
+	golf		-> 골프화 페이지 적재
+	running		-> 러닝화 페이지 적재
+	soccer		-> 축구화 페이지 적재
+	tennis		-> 테니스화 페이지 적재
+	training	-> 트레이닝화 페이지 적재
+	lifestyle	-> lifestyle화 페이지 적재
+
+
+다. 소스(src)
+
+main		=> /vo/controller/respository/service/
+basketball	=> /vo/controller/respository/service/
+golf		=> /vo/controller/respository/service/
+running		=> /vo/controller/respository/service/
+soccer		=> /vo/controller/respository/service/
+tennis		=> /vo/controller/respository/service/
+training	=> /vo/controller/respository/service/
+lifestyle	=> /vo/controller/respository/service/
+
+
+라. 뷰단 라이브러리
+
+webcontent/css	=> 부트스트랩
+webcontent/js	=> 부트스트랩
+webcontent/sass	=> 부트스트랩
+
+
+마. DB 설계
+
+Table 목록
+ - basketball
+ - golf
+ - running
+ - soccer
+ - tennis
+ - training
+ - lifestyle
+
+ 스키마
+ basketball(리스트)
+  - no, brand, pname, detail, gender, color, img_add, page_add
+
+ 시퀀스
+ seq_bball => start with 1, increment by 1, maxvalue 999999
+ seq_golf
+ seq_run
+ seq_soccer
+ seq_tennis
+ seq_train
+ seq_life
+

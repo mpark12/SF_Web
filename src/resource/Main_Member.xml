@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >	
+	
+<mapper namespace="main.repository.Member_Dao">
+	
+	<resultMap type="main_Member" id="main_Member_Rs"/>
+
+	
+	<select id="selectOne" parameterType="String" resultType="main_Member">
+        select * from member 
+        where userid = #{userid} 
+    </select>
+    
+    <insert id="insertMember" parameterType="main_Member">
+    	insert into member(name,userid,password,email,admin,imgink)
+    	values(#{name},#{userid},#{password},'noon','N','data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==')
+    </insert>
+    
+    <!--<update id="updateMember" parameterType="main_Member">
+    		update member set 
+    		where userid =#{userid}
+    	</update> -->
+    <delete id="deleteMember" parameterType="String">
+    	delete from member where userid = #{userid}
+    </delete>
+ 
+    <select id="selectAll" resultType="main_Member">
+    	select * from member
+    </select>
+    
+    <select id="checkId" parameterType="String" resultType="int">
+    	select NVL(COUNT(*),0)
+    	from member 
+    	where userid=#{userid}
+    </select>
+</mapper>
