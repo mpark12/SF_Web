@@ -1,12 +1,19 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<fmt:requestEncoding value="UTF-8"/>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="${path}/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="${path}/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Sneakers Finder - Basketball</title>
+	<title>Sneakers Finder</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -16,9 +23,18 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
 	<!-- CSS Files -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/material-kit.css" rel="stylesheet"/>
+    <link href="${path}/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="${path}/css/material-kit.css" rel="stylesheet"/>
 
+	<style type="text/css">
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.js">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+		});
+	</script>
 </head>
 
 <body class="profile-page">
@@ -32,13 +48,13 @@
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
 	    		</button>
-    		<a class="navbar-brand" href="main page_portfolio_MGP.html">Sneakers Finder</a>
+    		<a class="navbar-brand" href="${path}/main.do?method=main">Sneakers Finder</a>
     	</div>
 
         	<div class="collapse navbar-collapse" id="navigation-doc">
 	    		<ul class="nav navbar-nav">
-					<li class=""><a href="basketball_portfolio_MGP.html">Basketball</a></li>
-	        		<li><a href="running_portfolio_MGP.html">Running</a></li>
+					<li class=""><a href="${path}/main.do?method=basketball">Basketball</a></li>
+	        		<li><a href="${path}/main.do?method=running">Running</a></li>
 	        		<li><a href="#">Training</a></li>
 	        		<li><a href="#">Golf</a></li>
 	        		<li><a href="#">Soccer</a></li>
@@ -65,7 +81,7 @@
     </nav>
 
     <div class="wrapper">
-		<div class="header header-filter" style="background-image: url('assets/img/basketballcourt1.jpg');">
+		<div class="header header-filter" style="background-image: url('${path}/img/basketballcourt1.jpg');">
 			<div class="container">
                 
             </div>
@@ -90,7 +106,7 @@
 	                <div class="row">
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes1.jpg" alt="...">
+						     <img src="${path}/img/bbshoes1.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Harden Vol.1</h3>
 							        <p>Adidas Men's Basketball</p>
@@ -106,7 +122,7 @@
 	                    </div>
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes2.jpg" alt="...">
+						     <img src="${path}/img/bbshoes2.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Crazy Explosive Low</h3>
 							        <p>Adidas Men's Basketball</p>
@@ -124,7 +140,7 @@
 	                    </div>
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes3.jpg" alt="...">
+						     <img src="${path}/img/bbshoes3.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Dame 3</h3>
 							        <p>Adidas Men's Basketball</p>
@@ -142,7 +158,7 @@
 	                    </div>
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes4.jpg" alt="...">
+						     <img src="${path}/img/bbshoes4.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Kyrie 3</h3>
 							        <p>Nike Men's Basketball</p>
@@ -161,7 +177,7 @@
 	                    
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes1.jpg" alt="...">
+						     <img src="${path}/img/bbshoes1.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Harden Vol.1</h3>
 							        <p>Adidas Men's Basketball</p>
@@ -177,7 +193,7 @@
 	                    </div>
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes2.jpg" alt="...">
+						     <img src="${path}/img/bbshoes2.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Crazy Explosive Low</h3>
 							        <p>Adidas Men's Basketball</p>
@@ -195,7 +211,7 @@
 	                    </div>
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes3.jpg" alt="...">
+						     <img src="${path}/img/bbshoes3.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Dame 3</h3>
 							        <p>Adidas Men's Basketball</p>
@@ -213,7 +229,7 @@
 	                    </div>
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes4.jpg" alt="...">
+						     <img src="${path}/img/bbshoes4.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Kyrie 3</h3>
 							        <p>Nike Men's Basketball</p>
@@ -232,7 +248,7 @@
 	                    
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes1.jpg" alt="...">
+						     <img src="${path}/img/bbshoes1.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Harden Vol.1</h3>
 							        <p>Adidas Men's Basketball</p>
@@ -248,7 +264,7 @@
 	                    </div>
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes2.jpg" alt="...">
+						     <img src="${path}/img/bbshoes2.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Crazy Explosive Low</h3>
 							        <p>Adidas Men's Basketball</p>
@@ -266,7 +282,7 @@
 	                    </div>
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes3.jpg" alt="...">
+						     <img src="${path}/img/bbshoes3.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Dame 3</h3>
 							        <p>Adidas Men's Basketball</p>
@@ -284,7 +300,7 @@
 	                    </div>
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="assets/img/bbshoes4.jpg" alt="...">
+						     <img src="${path}/img/bbshoes4.jpg" alt="...">
 							     <div class="caption">
 							     	<h3>Kyrie 3</h3>
 							        <p>Nike Men's Basketball</p>
@@ -333,7 +349,7 @@
             <nav class="pull-left">
                 <ul>
 					<li>
-						<a href="main page_portfolio_MGP.html">
+						<a href="${path}/main.do?method=main">
 							Sneakers Finder
 						</a>
 					</li>
@@ -366,26 +382,27 @@
                 </a>
             </div>
             <div class="copyright">
-                &copy; 2017 Sneakers Finder, made with love
+                &copy; 2017 Sneakers Finder
             </div>
         </div>
     </footer>
 <!-- end footer -->
 
-
 </body>
+
+
 	<!--   Core JS Files   -->
-	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="assets/js/material.min.js"></script>
+	<script src="${path}/js/jquery.min.js" type="text/javascript"></script>
+	<script src="${path}/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="${path}/js/material.min.js"></script>
 
 	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-	<script src="assets/js/nouislider.min.js" type="text/javascript"></script>
+	<script src="${path}/js/nouislider.min.js" type="text/javascript"></script>
 
 	<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
-	<script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+	<script src="${path}/js/bootstrap-datepicker.js" type="text/javascript"></script>
 
 	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
-	<script src="assets/js/material-kit.js" type="text/javascript"></script>
+	<script src="${path}/js/material-kit.js" type="text/javascript"></script>
 
 </html>

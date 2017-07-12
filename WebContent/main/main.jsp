@@ -1,9 +1,16 @@
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
+%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<fmt:requestEncoding value="UTF-8"/>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-	<link rel="icon" type="image/png" href="assets/img/favicon.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="${path}/img/apple-icon.png">
+	<link rel="icon" type="image/png" href="${path}/img/favicon.png">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<title>Sneakers Finder</title>
@@ -16,11 +23,23 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 
 	<!-- CSS Files -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <link href="../css/material-kit.css" rel="stylesheet"/>
+    <link href="${path}/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="${path}/css/material-kit.css" rel="stylesheet"/>
 
+	<style type="text/css">
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.js">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#submitBtn").click(function(){
+				alert("Your message has been submitted successfully!");
+				("form").submit();
+			})
+		});
+	</script>
 </head>
-
+	
 <body class="landing-page">
     <nav class="navbar navbar-transparent navbar-absolute">
     	<div class="container">
@@ -32,13 +51,13 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
         		</button>
-        	<a class="navbar-brand" href="main page_portfolio_MGP.html">Sneakers Finder</a>
+        	<a class="navbar-brand" href="${path}/main.do?method=main">Sneakers Finder</a>
     	</div>
 
         	<div class="collapse navbar-collapse" id="navigation-doc">
 	    		<ul class="nav navbar-nav">
-					<li class=""><a href="basketball_portfolio_MGP.html">Basketball</a></li>
-	        		<li><a href="running_portfolio_MGP.html">Running</a></li>
+					<li class=""><a href="${path}/main.do?method=basketball">Basketball</a></li>
+	        		<li><a href="${path}/main.do?method=running">Running</a></li>
 	        		<li><a href="#">Training</a></li>
 	        		<li><a href="#">Golf</a></li>
 	        		<li><a href="#">Soccer</a></li>
@@ -65,7 +84,7 @@
     </nav>
 
     <div class="wrapper">
-        <div class="header header-filter" style="background-image: url('../img/basketballcourt1.jpg');">
+        <div class="header header-filter" style="background-image: url('${path}/img/basketballcourt1.jpg');">
             <div class="container">
                 <div class="row">
 					<div class="col-md-6">
@@ -130,7 +149,7 @@
 						<div class="row">
 							<div class="col-md-4">
 			                    <div class="team-player">
-			                        <img src="../img/basketballcourt6.jpg" alt="Thumbnail Image" class="img-raised img-rounded">
+			                        <img src="${path}/img/basketballcourt6.jpg" alt="Thumbnail Image" class="img-raised img-rounded">
 			                        <h4 class="title">Gigi Hadid <br />
 										<small class="text-muted">Co-founder</small>
 									</h4>
@@ -142,7 +161,7 @@
 			                </div>
 			                <div class="col-md-4">
 			                    <div class="team-player">
-			                        <img src="../img/basketballcourt2.jpg" alt="Thumbnail Image" class="img-raised img-rounded">
+			                        <img src="${path}/img/basketballcourt2.jpg" alt="Thumbnail Image" class="img-raised img-rounded">
 			                        <h4 class="title">Christian Louboutin<br />
 										<small class="text-muted">Designer & Developer</small>
 									</h4>
@@ -153,7 +172,7 @@
 			                </div>
 			                <div class="col-md-4">
 			                    <div class="team-player">
-			                        <img src="../img/basketballcourt5.jpg" alt="Thumbnail Image" class="img-raised img-rounded">
+			                        <img src="${path}/img/basketballcourt5.jpg" alt="Thumbnail Image" class="img-raised img-rounded">
 			                        <h4 class="title">Kendall Jenner<br />
 										<small class="text-muted">Co-founder</small>
 									</h4>
@@ -174,30 +193,30 @@
 	                    <div class="col-md-8 col-md-offset-2">
 	                        <h2 class="text-center title">Talk to us</h2>
 							<h4 class="text-center description">If you do not see the sneakers that you want, leave us a message.<br> We will get back to you ASAP!</h4>
-	                        <form class="contact-form">
+	                        <form class="contact-form" method="post" action="${path}/main.do?method=inquiry">
 	                            <div class="row">
 	                                <div class="col-md-6">
 										<div class="form-group label-floating">
 											<label class="control-label">Your Name</label>
-											<input type="email" class="form-control">
+											<input type="name" class="form-control" name="name">
 										</div>
 	                                </div>
 	                                <div class="col-md-6">
 										<div class="form-group label-floating">
 											<label class="control-label">Your Email</label>
-											<input type="email" class="form-control">
+											<input type="email" class="form-control" name="email">
 										</div>
 	                                </div>
 	                            </div>
 
 								<div class="form-group label-floating">
 									<label class="control-label">Your Message</label>
-									<textarea class="form-control" rows="4"></textarea>
+									<textarea class="form-control" rows="4" name="content"></textarea>
 								</div>
 
 	                            <div class="row">
 	                                <div class="col-md-4 col-md-offset-4 text-center">
-	                                    <button class="btn btn-primary btn-raised">
+	                                    <button class="btn btn-primary btn-raised" id="submitBtn">
 											Submit
 										</button>
 	                                </div>
@@ -218,7 +237,7 @@
             <nav class="pull-left">
                 <ul>
 					<li>
-						<a href="main.html">
+						<a href="${path}/main.do?method=main">
 							Sneakers Finder
 						</a>
 					</li>
@@ -261,17 +280,17 @@
 </body>
 
 	<!--   Core JS Files   -->
-	<script src="../js/jquery.min.js" type="text/javascript"></script>
-	<script src="../js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="../js/material.min.js"></script>
+	<script src="${path}/js/jquery.min.js" type="text/javascript"></script>
+	<script src="${path}/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="${path}/js/material.min.js"></script>
 
 	<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-	<script src="../js/nouislider.min.js" type="text/javascript"></script>
+	<script src="${path}/js/nouislider.min.js" type="text/javascript"></script>
 
 	<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
-	<script src="../js/bootstrap-datepicker.js" type="text/javascript"></script>
+	<script src="${path}/js/bootstrap-datepicker.js" type="text/javascript"></script>
 
 	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
-	<script src="../js/material-kit.js" type="text/javascript"></script>
+	<script src="${path}/js/material-kit.js" type="text/javascript"></script>
 
 </html>

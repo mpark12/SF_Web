@@ -4,20 +4,9 @@
 <configuration>
 	<typeAliases>
 	<!-- mapper에 쓰이는 공통 dto나 vo에 대한 선언을 별칭(alias)으로 쓰이게 했다. -->
-		<typeAlias alias="board_POST" type="board_POST.vo.Board_POST" />
-		<typeAlias alias="board_VISIT" type="board_VISIT.vo.Board_VISIT" />
-		<typeAlias alias="board_VISIT_Sch" type="board_VISIT.vo.Board_VISIT_Sch" />
-		<typeAlias alias="board_QA" type="board_QA.vo.Board_QA"/>
-		<typeAlias alias="board_QA_Sch" type="board_QA.vo.Board_QA_Sch"/>
-		<typeAlias alias="chartVar" type="chart.vo.ChartVar" />
-		<typeAlias alias="chart" type="chart.vo.Chart" />
-		<typeAlias alias="main_Member" type="main.vo.Member"/>
+		<typeAlias alias="inquiry" type="main.vo.Inquiry"/>
 	</typeAliases>
 	<mappers>
-		<mapper resource="resource/Board_POST_Mapper.xml" />
-		<mapper resource="resource/Board_VISIT_Mapper.xml" />
-		<mapper resource="resource/Board_QA_Mapper.xml" />
-		<mapper resource="resource/ChartMapper.xml" />
-		<mapper resource="resource/Main_Member.xml" />
+		<mapper resource="resource/Main_Mapper.xml" />
 	</mappers>
 </configuration>

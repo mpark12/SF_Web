@@ -14,12 +14,7 @@
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
 	</context:component-scan>
-	
-	<context:component-scan base-package="chart">
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
-	</context:component-scan>
+
 	
 	
 	<!-- DB연결 lib 추가 후-->
@@ -50,6 +45,6 @@
 		다수의 패키지를 등록할 때에는 ,를 통해 등록한다.
 	-->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="repository" />	
+		<property name="basePackage" value="main.repository" />	
 	</bean>
 </beans>
