@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import main.service.Main_Service;
 import main.vo.Inquiry;
+import main.vo.Signup;
 
 @Controller
 @RequestMapping("/main.do")
@@ -26,6 +27,21 @@ public class Main_Ctrl {
 		System.out.println(ins.getEmail());
 		System.out.println(ins.getContent());
 		service.insertInquiry(ins);
+		return "redirect:/main.do?method=main";
+	}
+	
+	@RequestMapping(params="method=signup")
+	public String signup(){
+		
+		return "main/signup.jsp";
+	}
+	
+	@RequestMapping(params="method=signupProc")
+	public String newmember(Signup ins){
+		System.out.println(ins.getName());
+		System.out.println(ins.getEmail());
+		System.out.println(ins.getPassword());
+		service.signUp(ins);
 		return "redirect:/main.do?method=main";
 	}
 	

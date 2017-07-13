@@ -42,7 +42,7 @@
     	<div class="container">
         	<!-- Brand and toggle get grouped for better mobile display -->
         	<div class="navbar-header">
-	    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-doc">
 	                <span class="sr-only">Toggle navigation</span>
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
@@ -61,17 +61,17 @@
 	        		<li><a href="#">Tennis</a></li>
 	        		<li><a href="#">lifestyle</a></li>
 	        		<li class="dropdown">
-	        			<a target="_black" class="dropdown-toggle" data-toggle="dropdown">Links to sources<b class="caret"></b></a>
+	        			<a target="_blank" class="dropdown-toggle" data-toggle="dropdown">Links to sources<b class="caret"></b></a>
 	        			<ul class="dropdown-menu">
-						  <li><a href="https://www.adidas.com" target="_black">Adidas</a></li>
-						  <li><a href="https://www.underarmour.com" target="_black">UnderArmour</a></li>
-						  <li><a href="https://www.nike.com" target="_black">Nike</a></li>
+						  <li><a href="https://www.adidas.com" target="_blank">Adidas</a></li>
+						  <li><a href="https://www.underarmour.com" target="_blank">UnderArmour</a></li>
+						  <li><a href="https://www.nike.com" target="_blank">Nike</a></li>
 						  <li class="divider"></li>
-						  <li><a href="https://www.footlocker.com" target="_black">Foot Locker</a></li>
+						  <li><a href="https://www.footlocker.com" target="_blank">Foot Locker</a></li>
 						  <li class="divider"></li>
-					      <li><a href="https://www.sneakernews.com" target="_black">Sneaker News</a></li>
+					      <li><a href="https://www.sneakernews.com" target="_blank">Sneaker News</a></li>
 					      <li class="divider"></li>
-					      <li><a href="https://www.weartesters.com" target="_black">Wear Testers</a></li>
+					      <li><a href="https://www.weartesters.com" target="_blank">Wear Testers</a></li>
 	        			</ul>
 	        		</li>
 	    		</ul>
@@ -110,7 +110,7 @@
 							     <div class="caption">
 							     	<h3>Ultra Boost</h3>
 							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/ultraboost-shoes/BA8923.html" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://www.adidas.com/us/ultraboost-shoes/BA8923.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										 Details
@@ -126,7 +126,7 @@
 							     <div class="caption">
 							     	<h3>Pure Boost</h3>
 							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/pureboost-shoes/BA8900.html" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://www.adidas.com/us/pureboost-shoes/BA8900.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										
@@ -144,7 +144,7 @@
 							     <div class="caption">
 							     	<h3>Alphabounce</h3>
 							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/alphabounce-engineered-mesh-shoes/BB9040.html" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://www.adidas.com/us/alphabounce-engineered-mesh-shoes/BB9040.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										
@@ -162,7 +162,7 @@
 							     <div class="caption">
 							     	<h3>Air Max</h3>
 							        <p>Nike Men's Running</p>
-							        <p><a href="http://store.nike.com/us/en_us/pd/air-max-2017-mens-running-shoe/pid-11235172/pgid-11289589" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://store.nike.com/us/en_us/pd/air-max-2017-mens-running-shoe/pid-11235172/pgid-11289589" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										
@@ -181,7 +181,7 @@
 							     <div class="caption">
 							     	<h3>Ultra Boost</h3>
 							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/ultraboost-shoes/BA8923.html" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://www.adidas.com/us/ultraboost-shoes/BA8923.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										 Details
@@ -197,7 +197,7 @@
 							     <div class="caption">
 							     	<h3>Pure Boost</h3>
 							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/pureboost-shoes/BA8900.html" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://www.adidas.com/us/pureboost-shoes/BA8900.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										
@@ -215,7 +215,7 @@
 							     <div class="caption">
 							     	<h3>Alphabounce</h3>
 							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/alphabounce-engineered-mesh-shoes/BB9040.html" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://www.adidas.com/us/alphabounce-engineered-mesh-shoes/BB9040.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										
@@ -233,7 +233,7 @@
 							     <div class="caption">
 							     	<h3>Air Max</h3>
 							        <p>Nike Men's Running</p>
-							        <p><a href="http://store.nike.com/us/en_us/pd/air-max-2017-mens-running-shoe/pid-11235172/pgid-11289589" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://store.nike.com/us/en_us/pd/air-max-2017-mens-running-shoe/pid-11235172/pgid-11289589" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										
@@ -252,7 +252,7 @@
 							     <div class="caption">
 							     	<h3>Ultra Boost</h3>
 							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/ultraboost-shoes/BA8923.html" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://www.adidas.com/us/ultraboost-shoes/BA8923.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										 Details
@@ -268,7 +268,7 @@
 							     <div class="caption">
 							     	<h3>Pure Boost</h3>
 							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/pureboost-shoes/BA8900.html" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://www.adidas.com/us/pureboost-shoes/BA8900.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										
@@ -286,7 +286,7 @@
 							     <div class="caption">
 							     	<h3>Alphabounce</h3>
 							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/alphabounce-engineered-mesh-shoes/BB9040.html" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://www.adidas.com/us/alphabounce-engineered-mesh-shoes/BB9040.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										
@@ -304,7 +304,7 @@
 							     <div class="caption">
 							     	<h3>Air Max</h3>
 							        <p>Nike Men's Running</p>
-							        <p><a href="http://store.nike.com/us/en_us/pd/air-max-2017-mens-running-shoe/pid-11235172/pgid-11289589" class="btn btn-primary" role="button" target="_black">BUY</a> 
+							        <p><a href="http://store.nike.com/us/en_us/pd/air-max-2017-mens-running-shoe/pid-11235172/pgid-11289589" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										
@@ -354,30 +354,30 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" target="_black">
-						   About Us
+						<a href="${path}/main.do?method=signup">
+						   Follow Us
 						</a>
 					</li>
 					<li>
-						<a href="#" target="_black">
+						<a href="#" target="_blank">
 						   Blog
 						</a>
 					</li>
 					<li>
-						<a href="#" target="_black">
+						<a href="#" target="_blank">
 							Licenses
 						</a>
 					</li>
                 </ul>
             </nav>
             <div class="social-area pull-right">
-                <a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/" target="_black">
+                <a class="btn btn-social btn-twitter btn-simple" href="https://twitter.com/" target="_blank">
                     <i class="fa fa-twitter"></i>
                 </a>
-                <a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/" target="_black">
+                <a class="btn btn-social btn-facebook btn-simple" href="https://www.facebook.com/" target="_blank">
                     <i class="fa fa-facebook-square"></i>
                 </a>
-                <a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/" target="_black">
+                <a class="btn btn-social btn-google btn-simple" href="https://plus.google.com/" target="_blank">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </div>

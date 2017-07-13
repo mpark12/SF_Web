@@ -7,11 +7,15 @@
 	<resultMap id="inquiryResult" type="inquiry"/>
 	
 	<select id="listInquiry" parameterType="String" resultMap="inquiryResult">
-        select * from inquiry 
+        select * from sf_inquiry 
     </select>
     
     <insert id="insertInquiry" parameterType="inquiry">
-    	insert into inquiry values(inquiry_seq.nextval, #{name}, #{email}, #{content})
+    	insert into sf_inquiry values(inquiry_seq.nextval, #{name}, #{email}, #{content})
+    </insert>
+
+	<insert id="signUp" parameterType="signup">
+    	insert into sf_signup values(signup_seq.nextval, #{name}, #{email}, #{password})
     </insert>
 
 </mapper>

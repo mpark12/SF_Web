@@ -33,8 +33,14 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#submitBtn").click(function(){
-				alert("Your message has been submitted successfully!");
-				("form").submit();
+				if($("#name").val()!=null && $("#name").val()!="" 
+					&& $("#email").val()!=null && $("#email").val()!="" 
+					&& $("#content").val()!=null && $("#content").val()!=""){
+					alert("Your message has been submitted successfully!");
+					$("form").submit();	
+				}else{
+					alert("Complete all fields to submit.");
+				}
 			})
 		});
 	</script>
@@ -45,14 +51,14 @@
     	<div class="container">
         	<!-- Brand and toggle get grouped for better mobile display -->
         	<div class="navbar-header">
-        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-doc">
             		<span class="sr-only">Toggle navigation</span>
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
         		</button>
-        	<a class="navbar-brand" href="${path}/main.do?method=main">Sneakers Finder</a>
-    	</div>
+        		<a class="navbar-brand" href="${path}/main.do?method=main">Sneakers Finder</a>
+    		</div>
 
         	<div class="collapse navbar-collapse" id="navigation-doc">
 	    		<ul class="nav navbar-nav">
@@ -78,9 +84,9 @@
 	        			</ul>
 	        		</li>
 	    		</ul>
-    	</div>
-	</div>
-    	</div>
+    		</div>
+    		
+		</div>
     </nav>
 
     <div class="wrapper">
@@ -88,8 +94,8 @@
             <div class="container">
                 <div class="row">
 					<div class="col-md-6">
+						<br><br>
 						<h1 class="title">Find the sneakers <br>all over the world <br>with ease!</h1>
-	                    <h4>We will do the work for you!</h4>
 	                    <br />
 	                    <a href="https://www.youtube.com/user/sneakernews" class="btn btn-primary btn-raised btn-lg" target="_blank">
 							<i class="fa fa-play"></i> Watch video
@@ -198,22 +204,23 @@
 	                                <div class="col-md-6">
 										<div class="form-group label-floating">
 											<label class="control-label">Your Name</label>
-											<input type="name" class="form-control" name="name">
+											<input type="name" class="form-control" name="name" id="name">
 										</div>
 	                                </div>
 	                                <div class="col-md-6">
 										<div class="form-group label-floating">
 											<label class="control-label">Your Email</label>
-											<input type="email" class="form-control" name="email">
+											<input type="email" class="form-control" name="email" id="email">
+											<span class="material-icons form-control-feedback">clear</span>
 										</div>
 	                                </div>
 	                            </div>
 
 								<div class="form-group label-floating">
 									<label class="control-label">Your Message</label>
-									<textarea class="form-control" rows="4" name="content"></textarea>
+									<textarea class="form-control" rows="4" name="content" id="content"></textarea>
 								</div>
-
+							</form>
 	                            <div class="row">
 	                                <div class="col-md-4 col-md-offset-4 text-center">
 	                                    <button class="btn btn-primary btn-raised" id="submitBtn">
@@ -221,7 +228,6 @@
 										</button>
 	                                </div>
 	                            </div>
-	                        </form>
 	                    </div>
 	                </div>
 
@@ -242,8 +248,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" target="_black">
-						   About Us
+						<a href="${path}/main.do?method=signup" target="_black">
+						   Follow Us
 						</a>
 					</li>
 					<li>
