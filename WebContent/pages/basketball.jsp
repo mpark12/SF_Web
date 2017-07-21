@@ -102,15 +102,17 @@
 	                </div>
 
 
-<!-- shoes thumbnails -->	
+<!-- shoes thumbnails -->
+				<c:forEach items="${itemList}" var="itemList">	
 	                <div class="row">
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
 						     <img src="${path}/img/bbshoes1.jpg" alt="...">
 							     <div class="caption">
-							     	<h3>Harden Vol.1</h3>
-							        <p>Adidas Men's Basketball</p>
-							        <p><a href="http://www.adidas.com/us/harden-vol.-1-shoes/BW0553.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
+							     	<h3>${itemList.title}</h3>
+							        <p>${itemList.subtitle}</p>
+							        <p>${itemList.price}</p>
+							        <p><a href="${itemList.url}" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
 										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										 Details
@@ -119,134 +121,10 @@
 									</p>
 							     </div>
 						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/bbshoes2.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Crazy Explosive Low</h3>
-							        <p>Adidas Men's Basketball</p>
-							        <p><a href="http://www.adidas.com/us/crazy-explosive-low-shoes/BW0571.html?pr=CUSTOMIZE_IMG_Crazy%2520Explosive%2520Low%2520Shoes" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/bbshoes3.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Dame 3</h3>
-							        <p>Adidas Men's Basketball</p>
-							        <p><a href="http://www.adidas.com/us/dame-3-rip-city-shoes/BB8268.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/bbshoes4.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Kyrie 3</h3>
-							        <p>Nike Men's Basketball</p>
-							        <p><a href="http://store.nike.com/us/en_us/pd/kyrie-3-mens-basketball-shoe/pid-11581600/pgid-11894372" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/bbshoes1.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Harden Vol.1</h3>
-							        <p>Adidas Men's Basketball</p>
-							        <p><a href="http://www.adidas.com/us/harden-vol.-1-shoes/BW0553.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										 Details
-										</button>
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/bbshoes2.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Crazy Explosive Low</h3>
-							        <p>Adidas Men's Basketball</p>
-							        <p><a href="http://www.adidas.com/us/crazy-explosive-low-shoes/BW0571.html?pr=CUSTOMIZE_IMG_Crazy%2520Explosive%2520Low%2520Shoes" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/bbshoes3.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Dame 3</h3>
-							        <p>Adidas Men's Basketball</p>
-							        <p><a href="http://www.adidas.com/us/dame-3-rip-city-shoes/BB8268.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/bbshoes4.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Kyrie 3</h3>
-							        <p>Nike Men's Basketball</p>
-							        <p><a href="http://store.nike.com/us/en_us/pd/kyrie-3-mens-basketball-shoe/pid-11581600/pgid-11894372" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    	                    
+	                    </div>                    
                     </div>
+                 </c:forEach>
+                    
 <!-- end of shoes thumbnails -->	                
 
 	            </div>
