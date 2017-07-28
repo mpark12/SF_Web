@@ -25,6 +25,7 @@
 	<!-- CSS Files -->
     <link href="${path}/css/bootstrap.min.css" rel="stylesheet" />
     <link href="${path}/css/material-kit.css" rel="stylesheet"/>
+    <link href="${path}/css/thumbnail.css" rel="stylesheet"/>
 
 	<style type="text/css">
 	</style>
@@ -104,20 +105,19 @@
 
 <!-- shoes thumbnails -->
 				<c:forEach items="${itemList}" var="itemList">	
-	                <div class="row">
+	                <div class="">
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="${path}/img/bbshoes1.jpg" alt="...">
+						     <img src="${itemList.src}" alt="...">
 							     <div class="caption">
-							     	<h3>${itemList.title}</h3>
+							     	<h4 id="productTitle">${itemList.title}</h4>
 							        <p>${itemList.subtitle}</p>
-							        <p>${itemList.price}</p>
+							        <p>$ ${itemList.price}</p>
 							        <p><a href="${itemList.url}" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
+										<!-- <button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										 Details
-										</button>
-										
+										</button> -->
 									</p>
 							     </div>
 						     </div>

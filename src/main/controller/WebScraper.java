@@ -1,7 +1,10 @@
 package main.controller;
 
 import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.json.JSONArray;
 
@@ -9,6 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
+import com.gargoylesoftware.htmlunit.html.HtmlImage;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
 import main.vo.Item;
@@ -23,7 +27,9 @@ public class WebScraper {
 		client.getOptions().setCssEnabled(false);
 		client.getOptions().setJavaScriptEnabled(false);
 				
-		JSONArray itemList = new JSONArray();
+//		JSONArray itemList = new JSONArray();
+		Item item = null;
+		ArrayList<Item> itemList = new ArrayList<Item>();
 		
 		try {
 			
@@ -43,21 +49,29 @@ public class WebScraper {
 					String itemSubtitle = spanSubtitle.asText();
 					HtmlElement spanPrice = ((HtmlElement) htmlItem.getFirstByXPath(".//div[3]/div[4]/div[4]/div[1]/span[@class='salesprice']"));
 					String itemPrice = spanPrice==null ? "On Sale" : spanPrice.asText();
-									
+					HtmlElement imageSrc = ((HtmlElement) htmlItem.getFirstByXPath(".//div[3]/div[3]/a/img"));
+					String itemImage = imageSrc.getAttribute("data-original");
+				
 				//	System.out.println(String.format("Name : %s Refine : %s Price : %s Url : %s", itemTitle, itemSubtitle, itemPrice, itemUrl));
 				
-					Item item = new Item();
+					item = new Item();
 					item.setTitle(itemTitle);
 					item.setSubtitle(itemSubtitle);
 					item.setPrice(itemPrice);
 					item.setUrl(itemUrl);
+					item.setSrc(itemImage);
+					
+					System.out.println(item.getSrc());
+					
+					itemList.add(item);
 										
-					ObjectMapper mapper = new ObjectMapper();
-					String jsonString = mapper.writeValueAsString(item);
+//					ObjectMapper mapper = new ObjectMapper();
+//					String jsonString = mapper.writeValueAsString(item);
+//					
+//					System.out.println(jsonString);
+//					
+//					itemList.put(jsonString);									
 					
-					System.out.println(jsonString);
-					
-					itemList.put(jsonString);									
 					
 				}
 			}
@@ -67,7 +81,7 @@ public class WebScraper {
 			e.printStackTrace();
 		}
 		
-		
+//		request.setAttribute("itemList", itemList);
 
 	}
 

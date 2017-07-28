@@ -5,6 +5,7 @@ public class Item {
 	private String subtitle;
 	private String price;
 	private String url;
+	private String src;
 	
 	public String getTitle() {
 		return title;
@@ -29,6 +30,12 @@ public class Item {
 	}
 	public void setUrl(String url) {
 		this.url = url;
+	}
+	public String getSrc() {
+		return src;
+	}
+	public void setSrc(String src) {
+		this.src = src;
 	}
 	
 }
