@@ -33,7 +33,7 @@ public class WebScraper {
 		
 		try {
 			
-			String searchUrl = baseUrl + URLEncoder.encode(searchQuery, "UTF-8") + "-shoes";
+			String searchUrl = baseUrl + URLEncoder.encode(searchQuery, "UTF-8") + "-shoes"+"?srule=newest-to-oldest";
 			HtmlPage page = client.getPage(searchUrl);
 						
 			List<HtmlElement> items = page.getByXPath("//div[@class='product-tile']");
@@ -61,7 +61,7 @@ public class WebScraper {
 					item.setUrl(itemUrl);
 					item.setSrc(itemImage);
 					
-					System.out.println(item.getSrc());
+					System.out.println(item.getUrl());
 					
 					itemList.add(item);
 										
