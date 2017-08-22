@@ -95,229 +95,35 @@
 	                    <div class="profile">
 	                       
 	                        <div class="name">
-	                            <h3 class="">Basketball Shoes</h3>
+	                            <h3 class="">Running Shoes</h3>
 								<h5>SEARCH RESULTS</h5>
 	                        </div>
 	                    </div>
 	                </div>
 
 
-<!-- shoes thumbnails -->	
-	                <div class="row">
+<!-- shoes thumbnails -->
+				<c:forEach items="${itemList}" var="itemList">	
+	                <div class="">
 	                    <div class="col-sm-3">
 	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes1.jpg" alt="...">
+						     <img src="${itemList.src}" alt="...">
 							     <div class="caption">
-							     	<h3>Ultra Boost</h3>
-							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/ultraboost-shoes/BA8923.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
+							     	<h4 id="productTitle">${itemList.title}</h4>
+							        <p>${itemList.subtitle}</p>
+							        <p>$ ${itemList.price}</p>
+							        <p><a href="${itemList.url}" class="btn btn-primary" role="button" target="_blank">BUY</a> 
 						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
+										<!-- <button class="btn btn-default" data-toggle="modal" data-target="#myModal">
 										 Details
-										</button>
-										
+										</button> -->
 									</p>
 							     </div>
 						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes2.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Pure Boost</h3>
-							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/pureboost-shoes/BA8900.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes3.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Alphabounce</h3>
-							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/alphabounce-engineered-mesh-shoes/BB9040.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes4.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Air Max</h3>
-							        <p>Nike Men's Running</p>
-							        <p><a href="http://store.nike.com/us/en_us/pd/air-max-2017-mens-running-shoe/pid-11235172/pgid-11289589" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes1.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Ultra Boost</h3>
-							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/ultraboost-shoes/BA8923.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										 Details
-										</button>
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes2.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Pure Boost</h3>
-							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/pureboost-shoes/BA8900.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes3.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Alphabounce</h3>
-							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/alphabounce-engineered-mesh-shoes/BB9040.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes4.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Air Max</h3>
-							        <p>Nike Men's Running</p>
-							        <p><a href="http://store.nike.com/us/en_us/pd/air-max-2017-mens-running-shoe/pid-11235172/pgid-11289589" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes1.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Ultra Boost</h3>
-							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/ultraboost-shoes/BA8923.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										 Details
-										</button>
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes2.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Pure Boost</h3>
-							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/pureboost-shoes/BA8900.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes3.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Alphabounce</h3>
-							        <p>Adidas Men's Running</p>
-							        <p><a href="http://www.adidas.com/us/alphabounce-engineered-mesh-shoes/BB9040.html" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                    <div class="col-sm-3">
-	                    	 <div class="thumbnail">
-						     <img src="${path}/img/runshoes4.jpg" alt="...">
-							     <div class="caption">
-							     	<h3>Air Max</h3>
-							        <p>Nike Men's Running</p>
-							        <p><a href="http://store.nike.com/us/en_us/pd/air-max-2017-mens-running-shoe/pid-11235172/pgid-11289589" class="btn btn-primary" role="button" target="_blank">BUY</a> 
-						        		<!-- Button trigger modal -->
-										<button class="btn btn-default" data-toggle="modal" data-target="#myModal">
-										
-										  Details
-										</button>
-										<!-- Modal Core -->
-										
-									</p>
-							     </div>
-						     </div>
-	                    </div>
-	                 
-	                </div>
+	                    </div>                    
+                    </div>
+                 </c:forEach>
+                    
 <!-- end of shoes thumbnails -->	                
 
 	            </div>
