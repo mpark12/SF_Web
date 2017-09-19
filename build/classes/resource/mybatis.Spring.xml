@@ -3,7 +3,7 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-	<!-- mapper에 쓰이는 공통 dto나 vo에 대한 선언을 별칭(alias)으로 쓰이게 했다. -->
+	<!-- mapper에 쓰이는 공통 dto나 vo에 대한 별칭(alias)을 선언 -->
 		<typeAlias alias="inquiry" type="main.vo.Inquiry"/>
 		<typeAlias alias="signup" type="main.vo.Signup"/>
 	</typeAliases>
